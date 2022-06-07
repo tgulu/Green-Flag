@@ -119,6 +119,7 @@
             android:layout_width="318dp"
             android:layout_height="58dp"
             android:layout_gravity='center'
+            android:enabled="false"
             android:backgroundTint="#00FF00"
             android:text="Register"
             android:textColor="@color/black"
