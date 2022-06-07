@@ -6,5 +6,5 @@ Enter Unique Password
 
 Re-Enter The Password for Security check
 
-![]()(images/Home_page.png)
+<img src= "images/Home_Page.png">
 
