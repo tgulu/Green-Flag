@@ -85,7 +85,14 @@ public class Register extends Activity {
             }
 
             @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                if (charSequence.length() ==8){
+                    sharedPreferences.edit().putString("EMAIL", charSequence.toString());
+                    nextBtn.setEnabled(true);
+                } else{
+                    nextBtn.setEnabled(false);
+                    emailField.setError("INCORRECT FORMAT");
+                }
                 validateEmail();
                 confirmInput();
             }
