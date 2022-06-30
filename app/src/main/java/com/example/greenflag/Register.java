@@ -87,10 +87,11 @@ public class Register extends Activity {
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
                 if (charSequence.length() ==8){
-                    sharedPreferences.edit().putString("EMAIL", charSequence.toString());
+                    sharedPreferences.edit().putString("EMAIL", charSequence.toString()).commit();
                     nextBtn.setEnabled(true);
                 } else{
                     nextBtn.setEnabled(false);
+                    sharedPreferences.getString("Email", null);
                     emailField.setError("INCORRECT FORMAT");
                 }
                 validateEmail();
